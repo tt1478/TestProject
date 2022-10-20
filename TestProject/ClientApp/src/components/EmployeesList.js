@@ -188,24 +188,24 @@ const EmployeesList = (props) => {
         }
     };
     const validateForm = () => {
-        if (employee.fullName.trim() === "" || employee.phoneNumber.trim() === "" || employee.fullName.length < 5 || employee.phoneNumber.length !== 9) {
-            if (employee.fullName === "") {
-                setFullNameValidationMessage("Full name is required");
-            }
-            else if(employee.fullName.length < 5) {
-                setFullNameValidationMessage("Full name should be at least 5 characters");
-            }
-            if (employee.phoneNumber === "") {
-                setPhoneNumberValidationMessage("Phone number is required");
-            }
-            else if (employee.phoneNumber.length !== 9) {
-                setPhoneNumberValidationMessage("Phone number should be 9 digits");
-            }
-            return true;
+        var isNotValid = false;
+        if (employee.fullName === "") {
+            isNotValid = true;
+            setFullNameValidationMessage("Full name is required");
         }
-        else {
-            return false;
+        else if (employee.fullName.length < 5) {
+            isNotValid = true;
+            setFullNameValidationMessage("Full name should be at least 5 characters");
         }
+        if (employee.phoneNumber === "") {
+            isNotValid = true;
+            setPhoneNumberValidationMessage("Phone number is required");
+        }
+        else if (employee.phoneNumber.length !== 9) {
+            isNotValid = true;
+            setPhoneNumberValidationMessage("Phone number should be 9 digits");
+        }
+        return isNotValid;
     }
     const columns = useMemo(
         () => [
