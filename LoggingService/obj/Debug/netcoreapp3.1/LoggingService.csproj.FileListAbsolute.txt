@@ -1,0 +1,10 @@
+C:\Users\Antoine\source\repos\TestProject\LoggingService\bin\Debug\netcoreapp3.1\LoggingService.deps.json
+C:\Users\Antoine\source\repos\TestProject\LoggingService\bin\Debug\netcoreapp3.1\LoggingService.dll
+C:\Users\Antoine\source\repos\TestProject\LoggingService\bin\Debug\netcoreapp3.1\LoggingService.pdb
+C:\Users\Antoine\source\repos\TestProject\LoggingService\obj\Debug\netcoreapp3.1\LoggingService.csproj.AssemblyReference.cache
+C:\Users\Antoine\source\repos\TestProject\LoggingService\obj\Debug\netcoreapp3.1\LoggingService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Antoine\source\repos\TestProject\LoggingService\obj\Debug\netcoreapp3.1\LoggingService.AssemblyInfoInputs.cache
+C:\Users\Antoine\source\repos\TestProject\LoggingService\obj\Debug\netcoreapp3.1\LoggingService.AssemblyInfo.cs
+C:\Users\Antoine\source\repos\TestProject\LoggingService\obj\Debug\netcoreapp3.1\LoggingService.csproj.CoreCompileInputs.cache
+C:\Users\Antoine\source\repos\TestProject\LoggingService\obj\Debug\netcoreapp3.1\LoggingService.dll
+C:\Users\Antoine\source\repos\TestProject\LoggingService\obj\Debug\netcoreapp3.1\LoggingService.pdb
