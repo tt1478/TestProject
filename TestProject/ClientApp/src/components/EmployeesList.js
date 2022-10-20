@@ -38,8 +38,8 @@ const EmployeesList = (props) => {
         setSearchName(searchName);
     };
 
-    const retrieveEmployees = () => {
-        EmployeeService.getAll()
+    const retrieveEmployees = async () => {
+        await EmployeeService.getAll()
             .then((response) => {
                 setEmployees(response.data);
             })
@@ -50,8 +50,8 @@ const EmployeesList = (props) => {
             });
     };
 
-    const findByName = () => {
-        EmployeeService.findByName(searchName)
+    const findByName = async () => {
+        await EmployeeService.findByName(searchName)
             .then((response) => {
                 setEmployees(response.data);
             })
@@ -69,7 +69,7 @@ const EmployeesList = (props) => {
         setPhoneNumberValidationMessage("");
         setIsAdd(true);
         setIsOpened(true);
-        
+
         //props.history.push("/add");
     }
     const openEmployee = (rowIndex) => {
@@ -82,8 +82,8 @@ const EmployeesList = (props) => {
         setIsOpened(true);
         //props.history.push("/employees/" + id);
     };
-    const getEmployee = id => {
-        EmployeeService.get(id)
+    const getEmployee = async (id) => {
+        await EmployeeService.get(id)
             .then(response => {
                 setEmployee(response.data);
                 debugger
@@ -99,10 +99,10 @@ const EmployeesList = (props) => {
                 });
             });
     };
-    const deleteEmployee = (rowIndex) => {
+    const deleteEmployee = async (rowIndex) => {
         const id = employeesRef.current[rowIndex].id;
 
-        EmployeeService.remove(id)
+        await EmployeeService.remove(id)
             .then((response) => {
                 props.history.push("/employees");
 
@@ -120,8 +120,8 @@ const EmployeesList = (props) => {
                 });
             });
     };
-    const retrieveJobs = () => {
-        JobService.getAll()
+    const retrieveJobs = async () => {
+        await JobService.getAll()
             .then((response) => {
                 if (response.data) {
                     debugger
@@ -140,15 +140,15 @@ const EmployeesList = (props) => {
         const { name, value } = event.target;
         setEmployee({ ...employee, [name]: value });
     };
-    const saveEmployee = () => {
-        if(validateForm() === false) {
+    const saveEmployee = async () => {
+        if (validateForm() === false) {
             var data = {
                 fullName: employee.fullName,
                 phoneNumber: employee.phoneNumber,
                 jobId: selectedJob[selectedJob.length - 1].value
             };
-    
-            EmployeeService.create(data)
+
+            await EmployeeService.create(data)
                 .then(response => {
                     setEmployee({
                         id: response.data.id,
@@ -169,31 +169,34 @@ const EmployeesList = (props) => {
                 });
         }
     };
-    const updateEmployee = () => {
-        if(validateForm() === false) {
+    const updateEmployee = async () => {
+        if (validateForm() === false) {
             employee.jobId = selectedJob[selectedJob.length - 1].value;
-            EmployeeService.update(employee.id, employee)
-            .then(response => {
-                retrieveEmployees();
-                toast.success('Employee was updated successfully', {
-                    position: toast.POSITION.TOP_RIGHT
+            await EmployeeService.update(employee.id, employee)
+                .then(response => {
+                    retrieveEmployees();
+                    toast.success('Employee was updated successfully', {
+                        position: toast.POSITION.TOP_RIGHT
+                    });
+                    setIsOpened(false);
+                })
+                .catch(e => {
+                    toast.warning(e, {
+                        position: toast.POSITION.TOP_RIGHT
+                    });
                 });
-                setIsOpened(false);
-            })
-            .catch(e => {
-                toast.warning(e, {
-                    position: toast.POSITION.TOP_RIGHT
-                });
-            });
         }
     };
     const validateForm = () => {
-        if(employee.fullName.trim() === "" || employee.phoneNumber.trim() === "") {
-            if(employee.fullName === "") {
+        if (employee.fullName.trim() === "" || employee.phoneNumber.trim() === "" || employee.phoneNumber.length !== 9) {
+            if (employee.fullName === "") {
                 setFullNameValidationMessage("Full name is required");
             }
-            if(employee.phoneNumber === "") {
+            if (employee.phoneNumber === "") {
                 setPhoneNumberValidationMessage("Phone number is required");
+            }
+            else if (employee.phoneNumber.length !== 9) {
+                setPhoneNumberValidationMessage("Phone number should be 9 digits");
             }
             return true;
         }
@@ -213,7 +216,7 @@ const EmployeesList = (props) => {
             },
             {
                 Header: "JobId",
-                accessor: "jobId",
+                accessor: "job.description",
             },
             {
                 Header: "Actions",
@@ -333,7 +336,7 @@ const EmployeesList = (props) => {
                                     onChange={handleInputChange}
                                     name="fullName"
                                 />
-                                <div className="text-danger">{ fullNameValidationMessage }</div>
+                                <div className="text-danger">{fullNameValidationMessage}</div>
                             </div>
 
                             <div className="form-group">
@@ -347,7 +350,7 @@ const EmployeesList = (props) => {
                                     onChange={handleInputChange}
                                     name="phoneNumber"
                                 />
-                                <div className="text-danger">{ phoneNumberValidationMessage }</div>
+                                <div className="text-danger">{phoneNumberValidationMessage}</div>
                             </div>
                             <div className="form-group">
                                 <label htmlFor="job">Job</label>

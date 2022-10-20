@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ikfHFNZ5CPWQP0PoG73bNhp/Ci2cT4X5ve9z2xgWJReAaPcq8VH9B1M1Bjn0BPq/8Pgek0OPG/cwRiRZaaFItA==",
+  "dgSpecHash": "XieV8B9ySI8uN4rbJiwAc2C4GUbRIiT6sqHa8xegQRtZVPHz9ulUdNs5w3UjHJqXL1c0Nnofde/BeeyrNSzaiA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Antoine\\source\\repos\\TestProject\\LoggingService\\LoggingService.csproj",
+  "projectFilePath": "C:\\Users\\Antoine\\Desktop\\New folder (5)\\TestProject\\LoggingService\\LoggingService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Antoine\\.nuget\\packages\\microsoft.extensions.configuration\\3.0.0\\microsoft.extensions.configuration.3.0.0.nupkg.sha512",
     "C:\\Users\\Antoine\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.0.0\\microsoft.extensions.configuration.abstractions.3.0.0.nupkg.sha512",

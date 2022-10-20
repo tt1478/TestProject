@@ -11,7 +11,7 @@ namespace Entities.DataTransferObjects
         [MinLength(5)]
         public string FullName { get; set; }
         [Required]
-        [MinLength(11), MaxLength(11)]
+        [MinLength(9), MaxLength(9)]
         public string PhoneNumber { get; set; }
         public int? JobId { get; set; }
     }

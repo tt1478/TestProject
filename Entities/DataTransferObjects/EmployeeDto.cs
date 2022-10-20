@@ -10,5 +10,6 @@ namespace Entities.DataTransferObjects
         public string FullName { get; set; }
         public string PhoneNumber { get; set; }
         public int? JobId { get; set; }
+        public JobDto Job { get; set; }
     }
 }

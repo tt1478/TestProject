@@ -751,11 +751,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Antoine\\source\\repos\\TestProject\\Contracts\\Contracts.csproj",
+      "projectUniqueName": "C:\\Users\\Antoine\\Desktop\\New folder (5)\\TestProject\\Contracts\\Contracts.csproj",
       "projectName": "Contracts",
-      "projectPath": "C:\\Users\\Antoine\\source\\repos\\TestProject\\Contracts\\Contracts.csproj",
+      "projectPath": "C:\\Users\\Antoine\\Desktop\\New folder (5)\\TestProject\\Contracts\\Contracts.csproj",
       "packagesPath": "C:\\Users\\Antoine\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Antoine\\source\\repos\\TestProject\\Contracts\\obj\\",
+      "outputPath": "C:\\Users\\Antoine\\Desktop\\New folder (5)\\TestProject\\Contracts\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Antoine\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -772,8 +772,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Antoine\\source\\repos\\TestProject\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\Antoine\\source\\repos\\TestProject\\Entities\\Entities.csproj"
+            "C:\\Users\\Antoine\\Desktop\\New folder (5)\\TestProject\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\Antoine\\Desktop\\New folder (5)\\TestProject\\Entities\\Entities.csproj"
             }
           }
         }

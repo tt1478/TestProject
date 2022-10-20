@@ -35,6 +35,7 @@ namespace Repository
         public async Task<IEnumerable<Employee>> GetEmployees(bool trackChanges, string searchTerm)
         {
             return await FindByCondition(e => e.FullName.ToLower().Contains(searchTerm.Trim().ToLower()), trackChanges)
+                    .Include(e => e.Job)
                     .OrderBy(e => e.FullName)
                     .ToListAsync();
         }

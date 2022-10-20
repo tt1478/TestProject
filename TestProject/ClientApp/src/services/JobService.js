@@ -1,7 +1,7 @@
 ﻿import http from "../http-common";
 
-const getAll = () => {
-    return http.get("/jobs");
+const getAll = async () => {
+    return await http.get("/jobs");
 };
 
 const JobService = {

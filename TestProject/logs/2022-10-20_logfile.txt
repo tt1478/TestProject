@@ -129,3 +129,7 @@ Error Number:547,State:0,Class:16
    at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
    at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
    at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2022-10-20 08:17:57.2668 ERROR Invalid model state for the object. Controller: Employees, action: UpdateEmployee
+2022-10-20 08:18:35.9155 ERROR Invalid model state for the object. Controller: Employees, action: UpdateEmployee
+2022-10-20 08:20:59.7707 ERROR Invalid model state for the object. Controller: Employees, action: UpdateEmployee
+2022-10-20 08:27:40.0647 ERROR Invalid model state for the object. Controller: Employees, action: UpdateEmployee

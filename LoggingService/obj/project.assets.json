@@ -331,11 +331,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Antoine\\source\\repos\\TestProject\\LoggingService\\LoggingService.csproj",
+      "projectUniqueName": "C:\\Users\\Antoine\\Desktop\\New folder (5)\\TestProject\\LoggingService\\LoggingService.csproj",
       "projectName": "LoggingService",
-      "projectPath": "C:\\Users\\Antoine\\source\\repos\\TestProject\\LoggingService\\LoggingService.csproj",
+      "projectPath": "C:\\Users\\Antoine\\Desktop\\New folder (5)\\TestProject\\LoggingService\\LoggingService.csproj",
       "packagesPath": "C:\\Users\\Antoine\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Antoine\\source\\repos\\TestProject\\LoggingService\\obj\\",
+      "outputPath": "C:\\Users\\Antoine\\Desktop\\New folder (5)\\TestProject\\LoggingService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Antoine\\AppData\\Roaming\\NuGet\\NuGet.Config",
