@@ -133,3 +133,11 @@ Error Number:547,State:0,Class:16
 2022-10-20 08:18:35.9155 ERROR Invalid model state for the object. Controller: Employees, action: UpdateEmployee
 2022-10-20 08:20:59.7707 ERROR Invalid model state for the object. Controller: Employees, action: UpdateEmployee
 2022-10-20 08:27:40.0647 ERROR Invalid model state for the object. Controller: Employees, action: UpdateEmployee
+2022-10-20 08:57:52.2925 ERROR Something went wrong: System.TimeoutException: The create-react-app server did not start listening for requests within the timeout period of 0 seconds. Check the log output for error information.
+   at Microsoft.AspNetCore.SpaServices.Extensions.Util.TaskTimeoutExtensions.WithTimeout[T](Task`1 task, TimeSpan timeoutDelay, String message)
+   at Microsoft.AspNetCore.SpaServices.Extensions.Proxy.SpaProxy.PerformProxyRequest(HttpContext context, HttpClient httpClient, Task`1 baseUriTask, CancellationToken applicationStoppingToken, Boolean proxy404s)
+   at Microsoft.AspNetCore.Builder.SpaProxyingExtensions.<>c__DisplayClass2_0.<<UseProxyToSpaDevelopmentServer>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2022-10-20 09:19:43.8842 ERROR Invalid model state for the object. Controller: Employees, action: CreateEmployee
+2022-10-20 09:20:03.2671 ERROR Invalid model state for the object. Controller: Employees, action: CreateEmployee

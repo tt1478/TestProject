@@ -188,9 +188,12 @@ const EmployeesList = (props) => {
         }
     };
     const validateForm = () => {
-        if (employee.fullName.trim() === "" || employee.phoneNumber.trim() === "" || employee.phoneNumber.length !== 9) {
+        if (employee.fullName.trim() === "" || employee.phoneNumber.trim() === "" || employee.fullName.length < 5 || employee.phoneNumber.length !== 9) {
             if (employee.fullName === "") {
                 setFullNameValidationMessage("Full name is required");
+            }
+            else if(employee.fullName.length < 5) {
+                setFullNameValidationMessage("Full name should be at least 5 characters");
             }
             if (employee.phoneNumber === "") {
                 setPhoneNumberValidationMessage("Phone number is required");
